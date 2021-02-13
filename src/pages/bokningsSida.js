@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import images from '../images';
 import '../styles/base.scss';
 
-const BokningsSida = props => {
+const BokningsSida = () => {
   return (
     <Layout>
         <Helmet title='SBS Om Oss' />
@@ -32,13 +32,13 @@ const BokningsSida = props => {
               <br />
               <br />
               <li>
-                <b className="bolderText">Kl. 17.30:</b> Samling för lättare förtäring
+                <b className="bolderText">Kl. 17.30: </b>Samling för lättare förtäring
                 Vi träffas och registrerar oss i receptionen och får där vidare information om lokalen.
               </li>
               <br />
               <br />
               <li>
-                <b className="bolderText">Kl. 18:00:</b> Presentation och rundvandring
+                <b className="bolderText">Kl. 18:00: </b>Presentation och rundvandring
               </li>
               <br />
               <br />
@@ -47,7 +47,7 @@ const BokningsSida = props => {
               </li>
               <br />
               <br />
-              Visningen är kostnadsfri för SBS medlemmar, icke-medlemmar betalar 300 kr. Bli medlem i SBS här >>
+              Visningen är kostnadsfri för SBS medlemmar, icke-medlemmar betalar 300 kr. Bli medlem i SBS här
               (Vid utebliven närvaro utan anmälan senast 24 timmar före debiteras en avgift på 100 kr.)
               <br />
               <br />
