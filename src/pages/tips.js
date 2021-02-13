@@ -8,7 +8,7 @@ const tips = () => {
   return (
     <Layout>
         <Helmet title='SBS Tipsa oss' />
-        <div className="wrapper tips">
+        <div className="wrapper tips tabWrapper">
           <h2 className="section-headline">Spännande ljusprojekt och diskussionsämnen</h2>
           <p>
             Det finns många spännande ljusprojekt, platser och diskussionsämnen.

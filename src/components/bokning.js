@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 const bokning = props => {
   return (
     <div className='bokning twoColumn'>
-      <div>
+      <div className='bokningText'>
         <h2>{props.title}</h2>
         <p>{props.text}</p>
         <Link to="/bokningsSida/"><div>Boka</div></Link>

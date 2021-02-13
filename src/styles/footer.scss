@@ -2,11 +2,37 @@
   height: 20vmin;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 40px;
 }
 
 .footer img {
   height: 40px;
   object-fit: contain;
+}
+
+@media (min-width: 1001px) {
+  .footer {
+    align-items: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer img {
+    align-self: flex-start;
+    margin: 20px 0
+  }
+
+  .socialMedia {
+    display: flex;
+  }
+
+  .socialMedia img {
+    margin: 30px;
+    margin-bottom: 50px;
+  }
 }

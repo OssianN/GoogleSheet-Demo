@@ -8,7 +8,7 @@ $mainColor: #005da5;
   background-color: transparent;
   border: 1px solid $mainColor;
   width: 150px;
-  height: 40px;
+  min-height: 40px;
   font-size: .9em;
   margin: 20px 0;
 }
@@ -23,6 +23,11 @@ $mainColor: #005da5;
 
 a {
   text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 html, body, #___gatsby, #gatsby-focus-wrapper, .App {
@@ -47,7 +52,6 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
 .wrapper > h2 {
   text-align: left;
   font-weight: 500;
-  font-size: 2.5em;
 }
 
 .tabWrapper {
@@ -56,9 +60,6 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
 
 .twoColumn {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5vmin;
   font-weight: 100;
   font-size: 1.1em;
   margin: 10vmin 0;
@@ -74,30 +75,6 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
 
 .bolderText {
   font-weight: 500;
-}
-
-.bliMedlem {
-  position: relative;
-  height: 50vmin;
-}
-
-.bliMedlem .bliMedlemText {
-  position: absolute;
-  color: #fff;
-  background-color: #0000008f;
-  font-size: 1.2em;
-  border-radius: 5px 0 0 5px;
-  z-index: 10;
-  width: calc(50% - 80px);
-  height: 50vmin;
-  margin: 0;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-}
-
-.bliMedlem .bliMedlemText a {
-  color: #fff;
 }
 
 .bliMedlem .bliMedlemImg {
@@ -162,8 +139,114 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
   border-radius: 5px;
 }
 
-.tips form input {
+.tips form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 300px;
+}
+
+.tips form input,
+.tips form textarea {
   border: 1px solid $mainColor;
   background-color: #fff;
   border-radius: 5px;
+}
+
+@media (min-width: 1001px) {
+  .twoColumn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5vmin;
+  }
+
+  .bliMedlem {
+    position: relative;
+    height: 50vmin;
+  }
+
+  .bliMedlem .bliMedlemText {
+    position: absolute;
+    color: #fff;
+    background-color: #0000008f;
+    font-size: 1.2em;
+    border-radius: 5px 0 0 5px;
+    z-index: 10;
+    width: calc(50% - 80px);
+    height: 50vmin;
+    margin: 0;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .bliMedlem .bliMedlemText a {
+    color: #fff;
+  }
+
+  .wrapper > h2 {
+    font-size: 2.5em;
+  }
+
+  .bliMedlemHeaderMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .twoColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bokningText {
+    order: 2;
+  }
+
+  .bokningImg {
+    order: 1;
+  }
+
+  .wrapper > h2 {
+    font-size: 1.5em;
+  }
+
+  .bliMedlem {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+  }
+
+  .bliMedlem {
+    color: #000;
+  }
+
+  .bliMedlem .bliMedlemText a {
+    color: $mainColor;
+  }
+
+  .bliMedlem .bliMedlemText {
+    font-size: 1.1em;
+    font-weight: 100;
+    order: 2;
+  }
+
+  .bliMedlemHeader {
+    display: none;
+  }
+
+  .bliMedlem .bliMedlemImg {
+    height: 50vmin;
+  }
+
+  .bliMedlemHeaderMobile {
+    position: absolute;
+    color: #fff;
+    padding-left: 20px;
+    margin-top: 30vmin;
+    z-index: 10;
+    order: 1
+  }
 }

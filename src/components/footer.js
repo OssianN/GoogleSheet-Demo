@@ -15,7 +15,9 @@ export default () => (
       <div className='button'>
         <Link to='/tips/'>Tipsa oss</Link>
       </div>
-      <img src={images.fb}></img>
-      <img src={images.youtube}></img>
+      <div className='socialMedia'>
+        <img src={images.fb}></img>
+        <img src={images.youtube}></img>
+      </div>
     </div>
   )
