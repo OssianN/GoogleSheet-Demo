@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Container from './Container';
+import Container from './container';
 import Nav from './nav';
 import Hamburger from './hamburger';
 import Footer from './footer';

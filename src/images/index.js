@@ -1,6 +1,6 @@
 import mockImg from './mockImg.jpeg';
 import logo from './logo.png';
-import LjuskulturOmslag from './Ljuskultur-omslag.jpg';
+import LjuskulturOmslag from './Ljuskultur-Omslag.jpg';
 import ljuskultur2_2017 from './ljuskultur2_2017.jpg';
 import bliMedlem from './bliMedlem.jpg';
 import bokning1 from './bokning1.jpg';
