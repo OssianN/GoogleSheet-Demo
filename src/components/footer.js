@@ -3,7 +3,7 @@ import '../styles/footer.scss';
 import images from '../images/';
 import { Link } from 'gatsby';
 
-export default () => (
+const Footer = () => (
     <div className='footer'>
       <div className='phoneAndEmail'>
         <p>+46-8-566 367 00</p>
@@ -21,3 +21,5 @@ export default () => (
       </div>
     </div>
   )
+
+  export default Footer;

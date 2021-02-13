@@ -3,7 +3,7 @@ import '../styles/hero.scss';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
-export default props => {
+const Hero = props => {
   return (
     <div className='hero'>
       <CarouselProvider
@@ -42,3 +42,5 @@ export default props => {
     </div>
   )
 }
+
+export default Hero;

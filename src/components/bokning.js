@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const bokning = props => {
+const Bokning = props => {
   return (
     <div className='bokning twoColumn'>
       <div className='bokningText'>
@@ -14,4 +14,4 @@ const bokning = props => {
   )
 }
 
-export default bokning;
+export default Bokning;

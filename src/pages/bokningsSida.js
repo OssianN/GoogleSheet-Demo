@@ -4,12 +4,12 @@ import Layout from '../components/layout';
 import images from '../images';
 import '../styles/base.scss';
 
-const bokningsSida = props => {
+const BokningsSida = props => {
   return (
     <Layout>
         <Helmet title='SBS Om Oss' />
         <div className="tabHero">
-          <img src={images.bokning1}></img>
+          <img src={images.bokning1} alt='bokning1'></img>
         </div>
         <div className="wrapper">
           <h2 className="section-headline">Svenska Belysningssällskapet inbjuder till teleoperatör 3s nya huvudkontor</h2>
@@ -59,4 +59,4 @@ const bokningsSida = props => {
   )
 }
 
-export default bokningsSida;
+export default BokningsSida;

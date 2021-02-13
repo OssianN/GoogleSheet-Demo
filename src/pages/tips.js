@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import images from '../images';
 import '../styles/base.scss';
 
-const tips = () => {
+const Tips = () => {
   return (
     <Layout>
         <Helmet title='SBS Tipsa oss' />
@@ -27,4 +27,4 @@ const tips = () => {
   )
 }
 
-export default tips;
+export default Tips;
