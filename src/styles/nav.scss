@@ -1,0 +1,72 @@
+@import './base.scss';
+
+.nav {
+  top: 0;
+  position: fixed;
+  z-index: 200;
+  background-color: $mainBackround;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+}
+
+@media (min-width: 1001px) {
+  .nav {
+    height: 15vmin;
+    width: 100%;
+    max-width: 1180px;
+  }
+
+  .nav ul {
+    display: flex;
+    margin: auto auto;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav ul li {
+    margin: 0 5vmin;
+  }
+
+  .nav ul li a {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    display: flex;
+    width: 280px;
+    height: 100vh;
+    right: 0;
+    background-color: #fff;
+    transition: margin .5s;
+    box-shadow: 0 0 5px #0000003d;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vmin;
+    padding: 0 7vmin;
+    height: 100vh;
+  }
+
+  .nav ul li {
+    margin: 5vmin 0;
+  }
+
+  .nav ul li a {
+    font-size: 1.4em;
+  }
+}

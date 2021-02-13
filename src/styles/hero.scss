@@ -1,0 +1,47 @@
+//======================KEYFRAMES======================//
+@keyframes heroImg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.hero {
+  position: relative;
+  max-width: 1200px;
+  height: 61.8vh;
+  max-height: 400px;
+  margin-top: 15vmin;
+}
+
+.heroImg {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: 1s;
+  animation-name: heroImg;
+}
+
+.heroText {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  bottom: 3vmin;
+  text-align: center;
+}
+
+.heroText h3 {
+  font-weight: 300;
+  font-size: 2em;
+}
+
+.heroText p {
+  font-weight: 300;
+  font-size: 1.2em;
+}
