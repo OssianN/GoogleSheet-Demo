@@ -1,0 +1,12 @@
+.footer {
+  height: 20vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.footer img {
+  height: 40px;
+  object-fit: contain;
+}

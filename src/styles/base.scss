@@ -1,4 +1,29 @@
 $mainBackround: #f5f5f5;
+$mainColor: #005da5;
+%mainButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid $mainColor;
+  width: 150px;
+  height: 40px;
+  font-size: .9em;
+  margin: 20px 0;
+}
+
+.button {
+  @extend %mainButton;
+}
+
+.button a {
+  color: $mainColor;
+}
+
+a {
+  text-decoration: none;
+}
 
 html, body, #___gatsby, #gatsby-focus-wrapper, .App {
   min-height: 100%;
@@ -6,7 +31,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: $mainBackround;
 }
 
@@ -16,10 +41,129 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
   margin: 0 auto;
   padding: 5vmin;
   background-color: #fff;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 5px 5px;
 }
 
-.wrapper h2 {
-  font-weight: 300;
+.wrapper > h2 {
+  text-align: left;
+  font-weight: 500;
   font-size: 2.5em;
+}
+
+.tabWrapper {
+  margin-top: 15vmin;
+}
+
+.twoColumn {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5vmin;
+  font-weight: 100;
+  font-size: 1.1em;
+  margin: 10vmin 0;
+}
+
+.twoColumn a {
+  color: $mainColor;
+}
+
+.twoColumn p {
+  margin: 0;
+}
+
+.bolderText {
+  font-weight: 500;
+}
+
+.bliMedlem {
+  position: relative;
+  height: 50vmin;
+}
+
+.bliMedlem .bliMedlemText {
+  position: absolute;
+  color: #fff;
+  background-color: #0000008f;
+  font-size: 1.2em;
+  border-radius: 5px 0 0 5px;
+  z-index: 10;
+  width: calc(50% - 80px);
+  height: 50vmin;
+  margin: 0;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+}
+
+.bliMedlem .bliMedlemText a {
+  color: #fff;
+}
+
+.bliMedlem .bliMedlemImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  z-index: 0;
+}
+
+.twoColumn .ljuskonsultImgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.twoColumn .ljuskonsultImgContainer p {
+  color: #646464;
+  font-size: .8em;
+  margin: 30px;
+  width: 50%;
+  text-align: center;
+}
+
+.twoColumn .ljuskonsultImg {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.bokningsLista {
+  list-style: none;
+}
+
+.bokningsLista li {
+  margin: 10vmin 0;
+}
+
+.bokningsLista li h2 {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.bokningsLista a div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: $mainColor;
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  font-size: 0.9em;
+  margin: 20px 0;
+}
+
+.bokningImg {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.tips form input {
+  border: 1px solid $mainColor;
+  background-color: #fff;
+  border-radius: 5px;
 }

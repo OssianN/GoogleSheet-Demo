@@ -1,5 +1,10 @@
 @import './base.scss';
 
+.disable a {
+  pointer-events: none !important;
+  color: #757575 !important;
+}
+
 .nav {
   top: 0;
   position: fixed;
@@ -17,6 +22,12 @@
   text-decoration: none;
   font-weight: 300;
   color: black;
+}
+
+.nav img {
+  position: absolute;
+  margin: 1.5vmin 0;
+  height: 12vmin;
 }
 
 @media (min-width: 1001px) {

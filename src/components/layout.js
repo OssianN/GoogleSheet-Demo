@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Container from './Container';
 import Nav from './nav';
 import Hamburger from './hamburger';
+import Footer from './footer';
 
 const Template = ({ children }) => {
   const [showMobileNav, setShowMobileNav] = useState('-400px');
@@ -17,6 +18,7 @@ const Template = ({ children }) => {
           showMobileNav={showMobileNav}
         />
         {children}
+        <Footer />
       </Container>
       </>
     )

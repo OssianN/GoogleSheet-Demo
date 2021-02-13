@@ -8,20 +8,21 @@
   }
 }
 
-
 .hero {
   position: relative;
   max-width: 1200px;
-  height: 61.8vh;
-  max-height: 400px;
+  height: 65vmin;
+  max-height: 600px;
   margin-top: 15vmin;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
 }
 
-.heroImg {
-  object-fit: cover;
-  height: 100%;
+.hero img {
   width: 100%;
-  border-radius: 10px 10px 0 0;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
   transition: 1s;
   animation-name: heroImg;
 }
@@ -29,11 +30,11 @@
 .heroText {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
   color: #fff;
-  bottom: 3vmin;
-  text-align: center;
+  text-align: left;
+  background-color: #00000083;
+  padding: 0 40px;
+  width: calc(100% - 80px);
 }
 
 .heroText h3 {
@@ -44,4 +45,35 @@
 .heroText p {
   font-weight: 300;
   font-size: 1.2em;
+}
+
+.carousel {
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.slideInner___2mfX9 {
+  max-height: 65vmin;
+}
+
+.tabHero {
+  margin-top: 15vmin;
+  height: 70vh;
+  max-height: 600px;
+}
+
+.tabHero img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 850px) {
+
 }

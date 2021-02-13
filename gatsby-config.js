@@ -1,4 +1,4 @@
-require('dotenv').config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -10,13 +10,15 @@ const contentfulConfig = {
 const { spaceId, accessToken } = contentfulConfig
 
 if (!spaceId || !accessToken) {
+  console.log(spaceId, accessToken)
   throw new Error(
     'Contentful spaceId and the access token need to be provided.'
-  )
+  );
 }
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-netlify-cms-paths`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-fonts`,
