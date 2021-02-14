@@ -41,6 +41,8 @@ const Home = () => {
               Vi arrangerar och bjuder in till möten, föredrag och debatter om aktuella ämnen liksom studiebesök på intressanta projekt. Vi är en av arrangörerna för den årligen återkommande tävlingen Svenska Ljuspriset.
             </p>
             <p>
+              <br />
+              <br />
               <b className="bolderText">Vi har drygt 500 medlemmar.</b> Bland oss finns arkitekter, inredare, tillverkare, el- och belysningskonsulter, läkare, optiker och skyddsingenjörer. Som medlem får du också tidningen Ljuskultur 6 gånger per år.
               <br />
               <br />
