@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
-import images from '../images';
 import '../styles/base.scss';
 
 const About = () => {

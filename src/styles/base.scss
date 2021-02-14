@@ -64,6 +64,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
 
 .tabWrapper {
   margin-top: 15vmin;
+  border-radius: 5px;
 }
 
 .twoColumn {
@@ -147,11 +148,24 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
   border-radius: 5px;
 }
 
+.wrapper.tips h2 {
+  text-align: center;
+}
+
+.wrapper.tips p {
+  max-width: 650px;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .tips form {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  min-width: 300px;
+  width: 70%;
+  min-width: 250px;
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 25vmin;
 }
 
 .tips form input,
@@ -159,6 +173,30 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
   border: 1px solid $mainColor;
   background-color: #fff;
   border-radius: 5px;
+  height: 30px;
+  width: 96%;
+  padding: 2%;
+  margin: 1em 0;
+}
+
+.tips form textarea {
+  max-width: 96%;
+  min-height: 60px;
+}
+
+.tips form label {
+  margin-top: 2em;
+  margin-left: 1em;
+}
+
+.tips img {
+  height: 20vmin;
+  margin: 2em;
+  transform: rotateY(180deg);
+}
+
+.tips img.odd {
+  position: absolute;
 }
 
 @media (min-width: 1001px) {
@@ -198,6 +236,10 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
 
   .wrapper > h2 {
     font-size: 2.5em;
+  }
+
+  .tips img.odd {
+    right: 20vmin;
   }
 }
 
@@ -257,6 +299,10 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
     font-size: 1.2em;
     z-index: 10;
     order: 1
+  }
+
+  .tips img.odd {
+    right: 0;
   }
 
   @media (min-width: 580px) {

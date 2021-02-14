@@ -23,8 +23,8 @@ const Medlemskap = () => {
             Ljuskultur är en facktidskrift som informerar och inspirerar alla som yrkesmässigt sysslar med belysning. Våra läsare är el- och belysningskonsulter, arkitekter, inredare, elinstallatörer och brukare samt fabrikanter. Ljuskultur visar nya belysningsanläggningar, ny teknik och ljusets samspel med arkitektur. Tidningen presenterar också ny forskning och produktnyheter.
             </p>
             <div className="ljuskonsultImgContainer">
-              <img className='ljuskonsultImg' src={images.LjuskulturOmslag} />
-              <img className='ljuskonsultImg hideDesktop' src={images.ljuskultur2_2017} />
+              <img className='ljuskonsultImg' alt='ljuskonsult omslag'  src={images.LjuskulturOmslag} />
+              <img className='ljuskonsultImg hideDesktop' alt='ljuskonsult 2017' src={images.ljuskultur2_2017} />
               <p>
                 I ditt medlemskap i Svenska Belysningssällskapet ingår en prenumeration av tidningen Ljuskultur
               </p>
@@ -41,7 +41,7 @@ const Medlemskap = () => {
               <a href="https://ljuskultur.prenservice.se/kodlandning?internetkod=203-203008" >Klicka här för att bli medlem! &#x203A;</a>
             </p>
             <div className='ljuskonsultImgContainer hideMobile'>
-              <img className='ljuskonsultImg' src={images.ljuskultur2_2017} />
+              <img className='ljuskonsultImg' alt='ljuskonsult 2017' src={images.ljuskultur2_2017} />
             </div>
           </div>
         </div>

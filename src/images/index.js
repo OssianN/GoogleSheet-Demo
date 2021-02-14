@@ -8,6 +8,8 @@ import bokning2 from './bokning2.png';
 import bokning3 from './bokning3.png';
 import fb from './fb.png';
 import youtube from './youtube.png';
+import tips1 from './tips1.svg';
+import tips2 from './tips2.svg';
 
 export default {
   mockImg,
@@ -20,4 +22,6 @@ export default {
   bokning3,
   fb,
   youtube,
+  tips1,
+  tips2,
 }

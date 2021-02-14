@@ -7,7 +7,7 @@ const Nav = props => {
     <nav className='nav' style={{marginRight: props.showMobileNav}}>
       <ul className=''>
         <li className=''>
-          <Link to="/">Home</Link>
+          <Link to="/">Hem</Link>
         </li>
         <li className=''>
           <Link to="/medlemskap/">Medlemskap</Link>

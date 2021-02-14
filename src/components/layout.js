@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Container from './container';
 import Nav from './nav';
+import { Link } from 'gatsby';
 import Hamburger from './hamburger';
 import images from '../images';
 import Footer from './footer';
@@ -12,7 +13,7 @@ const Template = ({ children }) => {
       <>
       <Container>
         <div className="mobileNav"></div>
-        <img src={images.logo} alt='logo' className='logo'></img>
+        <Link to='/'><img src={images.logo} alt='logo' className='logo'></img></Link>
         <Hamburger
           showMobileNav={showMobileNav}
           setShowMobileNav={setShowMobileNav}

@@ -61,7 +61,16 @@ const Home = () => {
             <h2 className='bliMedlemHeader hideDesktop'>Medlem i belysningssällskapet 
           <span style={{fontSize: '.7em', fontWeight: '200'}}> <br />
           – arrangemang och prenumeration</span></h2>
-            <img className='bliMedlemImg' src={images.bliMedlem}></img>
+            <img className='bliMedlemImg' alt='bli medlem' src={images.bliMedlem}></img>
+          </div>
+          <h2>Tipsa oss</h2>
+          <div>
+            <p>
+            Spännande ljusprojekt och diskussionsämnen. Det finns många spännande ljusprojekt, platser och diskussionsämnen. Tipsa oss gärna om bra och aktuella arrangemang, studiebesök och ämnen som vi skulle kunna arrangera och diskutera tillsammans med våra medlemmar.
+            <br />
+            <br />
+            <Link to="/tips/">Tipsa oss &#x203A;</Link>
+            </p>
           </div>
         </div>
     </Layout>

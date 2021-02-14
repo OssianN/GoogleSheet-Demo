@@ -16,8 +16,8 @@ const Footer = () => (
         <Link to='/tips/'>Tipsa oss</Link>
       </div>
       <div className='socialMedia'>
-        <img src={images.fb}></img>
-        <img src={images.youtube}></img>
+        <img src={images.fb} alt='Facebook'></img>
+        <img src={images.youtube} alt='YouTube'></img>
       </div>
     </div>
   )

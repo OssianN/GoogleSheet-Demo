@@ -9,7 +9,7 @@ const Bokning = props => {
         <p>{props.text}</p>
         <Link to="/bokningsSida/"><div>Boka</div></Link>
       </div>
-      <img className='bokningImg' src={props.img}></img>
+      <img className='bokningImg' src={props.img} alt='bokning'></img>
     </div>
   )
 }
