@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import images from '../images';
 import '../styles/nav.scss';
 
 const Nav = props => {
   return (
     <nav className='nav' style={{marginRight: props.showMobileNav}}>
-      <img src={images.logo} alt='logo'></img>
       <ul className=''>
         <li className=''>
           <Link to="/">Home</Link>

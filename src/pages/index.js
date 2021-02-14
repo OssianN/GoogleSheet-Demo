@@ -47,7 +47,7 @@ const Home = () => {
               <b className="bolderText">Belysningssällskap finns också i Malmö och Göteborg.</b> Som medlem i Svenska Belysningssällskapet får du deltar i våra systersällskapens arrangemang till medlemspris. 
             </p>
           </div>
-          <h2 className='bliMedlemHeader'>Medlem i belysningssällskapet 
+          <h2 className='bliMedlemHeader hideMobile'>Medlem i belysningssällskapet 
           <span style={{fontSize: '.7em', fontWeight: '200'}}> <br />
           – arrangemang och prenumeration</span></h2>
           <div className='bliMedlem'>
@@ -58,7 +58,7 @@ const Home = () => {
                 <Link to="/medlemskap/">Bli medlem här &#x203A;</Link>
               </p>
             </div>
-            <h2 className='bliMedlemHeaderMobile'>Medlem i belysningssällskapet 
+            <h2 className='bliMedlemHeader hideDesktop'>Medlem i belysningssällskapet 
           <span style={{fontSize: '.7em', fontWeight: '200'}}> <br />
           – arrangemang och prenumeration</span></h2>
             <img className='bliMedlemImg' src={images.bliMedlem}></img>

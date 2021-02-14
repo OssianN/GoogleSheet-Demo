@@ -12,7 +12,7 @@ const Aktuellt = () => {
   return (
     <Layout>
         <Helmet title='SBS Aktuellt' />
-        <div className="wrapper">
+        <div className="wrapper tabWrapper">
           <h2 className="section-headline">Aktuellt</h2>
           <ul className='bokningsLista'>
             <li>

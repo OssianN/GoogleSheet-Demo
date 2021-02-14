@@ -24,6 +24,7 @@ const Medlemskap = () => {
             </p>
             <div className="ljuskonsultImgContainer">
               <img className='ljuskonsultImg' src={images.LjuskulturOmslag} />
+              <img className='ljuskonsultImg hideDesktop' src={images.ljuskultur2_2017} />
               <p>
                 I ditt medlemskap i Svenska Belysningssällskapet ingår en prenumeration av tidningen Ljuskultur
               </p>
@@ -39,7 +40,7 @@ const Medlemskap = () => {
               <br />
               <a href="https://ljuskultur.prenservice.se/kodlandning?internetkod=203-203008" >Klicka här för att bli medlem! &#x203A;</a>
             </p>
-            <div className="ljuskonsultImgContainer">
+            <div className='ljuskonsultImgContainer hideMobile'>
               <img className='ljuskonsultImg' src={images.ljuskultur2_2017} />
             </div>
           </div>

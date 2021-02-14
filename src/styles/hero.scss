@@ -15,14 +15,12 @@
   max-height: 600px;
   margin-top: 15vmin;
   background-color: #fff;
-  border-radius: 5px 5px 0 0;
 }
 
 .hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px 5px 0 0;
   transition: 1s;
   animation-name: heroImg;
 }
@@ -66,14 +64,34 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 5px 5px 0 0;
 }
 
+
+@media (min-width: 1001px) {
+  .hero {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .hero img {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .tabHero img {
+    border-radius: 5px 5px 0 0;
+  }
+}
 
 @media (max-width: 1000px) {
-
-}
-
-@media (max-width: 850px) {
-
+  .heroText h3 {
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .heroText p {
+    font-weight: 100;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
 }

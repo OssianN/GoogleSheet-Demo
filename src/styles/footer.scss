@@ -7,6 +7,7 @@
 
 .footer img {
   height: 40px;
+  margin: 0 40px;
   object-fit: contain;
 }
 
@@ -24,7 +25,6 @@
 
   .footer img {
     align-self: flex-start;
-    margin: 20px 0
   }
 
   .socialMedia {

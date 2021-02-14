@@ -24,17 +24,15 @@
   color: black;
 }
 
-.nav img {
-  position: absolute;
-  margin: 1.5vmin 0;
-  height: 12vmin;
-}
-
 @media (min-width: 1001px) {
   .nav {
     height: 15vmin;
     width: 100%;
     max-width: 1180px;
+  }
+
+  .mobileNav {
+    display: none;
   }
 
   .nav ul {
@@ -55,6 +53,15 @@
 }
 
 @media (max-width: 1000px) {
+  .mobileNav {
+    position: fixed;
+    min-height: 15vmin;
+    width: 100%;
+    top: 0;
+    background-color: $mainBackround;
+    z-index: 100;
+  }
+
   .nav {
     display: flex;
     width: 280px;
