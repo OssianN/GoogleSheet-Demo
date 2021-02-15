@@ -39,10 +39,10 @@ const Home = () => {
             <p>
               <b className="bolderText">Svenska Belysningssällskapet är en ideell förening</b> som arbetar för kunskap, kreativitet och utveckling inom belysningsområdet samt för att öka insikten om ljusets betydelse för den totala miljön.
               Vi arrangerar och bjuder in till möten, föredrag och debatter om aktuella ämnen liksom studiebesök på intressanta projekt. Vi är en av arrangörerna för den årligen återkommande tävlingen Svenska Ljuspriset.
+              <br />
+              <br />
             </p>
             <p>
-              <br />
-              <br />
               <b className="bolderText">Vi har drygt 500 medlemmar.</b> Bland oss finns arkitekter, inredare, tillverkare, el- och belysningskonsulter, läkare, optiker och skyddsingenjörer. Som medlem får du också tidningen Ljuskultur 6 gånger per år.
               <br />
               <br />
