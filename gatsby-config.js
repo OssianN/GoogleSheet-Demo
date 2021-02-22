@@ -20,6 +20,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-netlify-cms-paths`,
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

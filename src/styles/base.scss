@@ -80,7 +80,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
 }
 
 .twoColumn p {
-  margin: 0;
+  margin: 1rem 0;
 }
 
 .bolderText {
@@ -148,18 +148,21 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
   margin: 0 auto;
 }
 
-.tips form {
+form {
   display: flex;
   flex-direction: column;
   width: 70%;
   min-width: 250px;
   max-width: 450px;
   margin: 0 auto;
-  margin-top: 25vmin;
 }
 
-.tips form input,
-.tips form textarea {
+.tips form {
+  margin-top: 20vmin;
+}
+
+form input,
+form textarea {
   border: 1px solid $mainColor;
   background-color: #fff;
   border-radius: 5px;
@@ -169,12 +172,12 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
   margin: 1em 0;
 }
 
-.tips form textarea {
+form textarea {
   max-width: 96%;
   min-height: 60px;
 }
 
-.tips form label {
+form label {
   margin-top: 2em;
   margin-left: 1em;
 }
@@ -187,6 +190,10 @@ html, body, #___gatsby, #gatsby-focus-wrapper, .App {
 
 .tips img.odd {
   position: absolute;
+}
+
+.event_form_header {
+  font-weight: 400;
 }
 
 @media (min-width: 1001px) {
