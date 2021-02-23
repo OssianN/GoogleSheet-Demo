@@ -7,7 +7,7 @@ const Footer = () => (
     <div className='footer'>
       <div className='phoneAndEmail'>
         <p>+46-8-566 367 00</p>
-        <p>info@belsyningsbranschen.se</p>
+        <p>info@belysningsbranschen.se</p>
       </div>
       <div className='button'>
         <Link to='/medlemskap/'>Bli medlem</Link>
