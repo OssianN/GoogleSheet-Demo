@@ -1,72 +1,72 @@
-import React, { useState, useRef } from 'react';
-import { Helmet } from 'react-helmet';
-import Layout from '../components/layout';
-import { graphql } from 'gatsby';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import Img from "gatsby-image";
-import '../styles/base.scss';
+import React, { useState } from "react"
+import { Helmet } from "react-helmet"
+import Layout from "../components/layout"
+import { graphql } from "gatsby"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import Img from "gatsby-image"
+import "../styles/base.scss"
+import "./template.css"
 
 export const query = graphql`
   query($slug: String!) {
     post: contentfulEvent(slug: { eq: $slug }) {
-        titel
-        eventbild {
-          fluid {
-            ...GatsbyContentfulFluid
-          }
+      titel
+      eventbild {
+        fluid {
+          ...GatsbyContentfulFluid
         }
-        mainText {
-          raw
-        }
-        praktiskInformation {
-          raw
-        }
-        sheet
       }
+      mainText {
+        raw
+      }
+      praktiskInformation {
+        raw
+      }
+      sheet
     }
+  }
 `
 
 const EventTemplate = ({ data }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [msg, setMsg] = useState('');
+  const initialState = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  }
+  const [formInputs, setFormInputs] = useState(initialState)
+  const event = data.post
 
-  const nameInput = useRef('');
-  const emailInput = useRef('');
-  const subjectInput = useRef('');
-  const msgInput = useRef('');
-
-  const resetForm = () => {
-    nameInput.current.value = '';
-    emailInput.current.value = '';
-    subjectInput.current.value = '';
-    msgInput.current.value = '';
+  const handleChange = e => {
+    const { name } = e.target
+    setFormInputs({
+      ...formInputs,
+      [name]: e.target.value,
+    })
   }
 
-  const event = data.post;
-  
+  const resetForm = () => {
+    setFormInputs(initialState)
+  }
+
   const handleSumbit = async e => {
-    e.preventDefault();
+    e.preventDefault()
 
     const formData = {
-      name,
-      email,
-      subject,
-      msg,
+      ...formInputs,
       sheetTitle: event.sheet,
     }
 
     const fetchData = {
-      method: 'POST',
+      method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     }
 
     try {
-      resetForm();
-      await fetch("/.netlify/functions/sendDataToSheet", fetchData);
-      await fetch("/.netlify/functions/sendEmail", fetchData);
+      resetForm()
+      await fetch("/.netlify/functions/sendDataToSheet", fetchData)
+      await fetch("/.netlify/functions/sendEmail", fetchData)
     } catch (e) {
       console.error(e)
     }
@@ -74,36 +74,67 @@ const EventTemplate = ({ data }) => {
 
   return (
     <Layout>
-        <Helmet title={`SBS ${event.titel}`} />
-        <div className="tabHero">
-          <Img
-            alt='bokning1' fluid={event.eventbild.fluid}
-            objectFit='cover'>
-          </Img>
-        </div>
-        <div className="wrapper">
-          <h2 className="section-headline">{event.titel}</h2>
-          <div className="twoColumn">
-            <div>{ documentToReactComponents(JSON.parse(event.mainText.raw)) }</div>
-            <div>{ documentToReactComponents(JSON.parse(event.praktiskInformation.raw)) }</div>
-          </div>
+      <Helmet title={`${event.titel}`} />
+      <section className='event-info__wrapper'>
+        <Img
+          alt="bokning1"
+          fluid={event.eventbild.fluid}
+          objectFit="cover"
+        ></Img>
+        <h2 className="event__headline">{event.titel}</h2>
+        <div className="two-columns">
+          <div>{documentToReactComponents(JSON.parse(event.mainText.raw))}</div>
           <div>
-            <h2 className='event_form_header'>Boka en plats</h2>
-            <form onSubmit={e => handleSumbit(e)}>
-              <label htmlFor='nameInput'>Name*</label>
-              <input type="text" id='nameInput' onChange={e => setName(e.target.value)} ref={nameInput}></input>
-              <label htmlFor='nameInput' >E-post*</label>
-              <input type="text" onChange={e => setEmail(e.target.value)} ref={emailInput}></input>
-              <label htmlFor='nameInput'>Ämne</label>
-              <input type="text" onChange={e => setSubject(e.target.value)} ref={subjectInput}></input>
-              <label htmlFor='nameInput'>Meddelande</label>
-              <textarea type="text" onChange={e => setMsg(e.target.value)} ref={msgInput}></textarea>
-              <button className="button" type="submit" >Submit</button>
-            </form>
+            {documentToReactComponents(
+              JSON.parse(event.praktiskInformation.raw)
+            )}
           </div>
         </div>
+      </section>
+
+      <section className="form__wrapper">
+        <h2 className="form__header">Boka en plats</h2>
+        <form className='event__form' onSubmit={handleSumbit}>
+          <input
+            placeholder='Name'
+            className="form__input"
+            type="text"
+            id="name"
+            name="name"
+            onChange={handleChange}
+          ></input>
+          <input
+            placeholder='Email'
+            className="form__input"
+            type="text"
+            id="email"
+            name="email"
+            onChange={handleChange}
+          ></input>
+          <input
+            placeholder='Subject'
+            className="form__input"
+            type="text"
+            id="subject"
+            name="subject"
+            onChange={handleChange}
+          ></input>
+          <textarea
+            placeholder='Message'
+            className="form__input"
+            type="text"
+            id="message"
+            name="message"
+            onChange={handleChange}
+            value={formInputs.message}
+          ></textarea>
+          <button className="btn event__button" type="submit">
+            Submit
+          </button>
+        </form>
+      </section>
     </Layout>
   )
 }
 
-export default EventTemplate;
+export default EventTemplate

@@ -7,7 +7,7 @@ const contentfulConfig = {
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 }
 
-const { spaceId, accessToken } = contentfulConfig
+const { spaceId, accessToken } = contentfulConfig;
 
 if (!spaceId || !accessToken) {
   console.log(spaceId, accessToken)
