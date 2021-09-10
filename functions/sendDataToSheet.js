@@ -1,4 +1,4 @@
-const { GoogleSpreadsheet } = require('google-spreadsheet');
+const { GoogleSpreadsheet } = require('../google-spreadsheet');
 
 exports.handler = async (event, context) => {
   const data = JSON.parse(event.body);
