@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    const googleSheet = require('./googleSheet.json');
+    const googleSheet = require('../googleSheet.json');
     const doc = new GoogleSpreadsheet('1f74p-Mx5PPs_JohhjdH18426UXrX7GtNTTQxMI4PgjU');
     await doc.useServiceAccountAuth(googleSheet);
     await doc.loadInfo();
