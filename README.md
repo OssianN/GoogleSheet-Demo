@@ -8,8 +8,7 @@ The purpose of this repo is to show off a way to connect an online form to a Goo
 I've connected it to Contenful to create a "new event" and for each event a new Google Sheet is created.
 When a user submits their information into the form on the site, the information will be passed on to the respective Sheet.
 
-## Usecase
-
-Example usecase: 
+## Example usecase
+ 
 - Collect applications for a program
 - Register participants to an event.
