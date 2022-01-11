@@ -10,4 +10,6 @@ When a user submits their information into the form on the site, the information
 
 ## Usecase
 
-It can for example be used if you want to collect applications for a program or participant to events.
+Example usecase: 
+- Collect applications for a program
+- Register participants to an event.
